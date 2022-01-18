@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #FFFFFF;
+  margin: 0;
+  
+}
+/* Main -- Using Grid Layout -2 column */
+main {
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+  grid-template-rows: auto;
+  column-gap: 2rem;
+  max-width: 100%;
+  /* height: max-content; */
+  /* overflow-y: hidden; */
+}
+nav {
+  border-right: 3px solid lightgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: #FFFFFF;
+  /* align-items: center; */
+}
+/* Nav-links Contatiner */
+#nav-links {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+.nav-link {
+  text-decoration: none;
+  color: grey;
+  font-weight: 500;
+  border-top: 1px solid black;
+  padding: 0.7rem;
+  font-size: 1.2rem;
+  
+}
+#sections {
+  /* height: max-content; */
+}
+.main-section p,.main-section li {
+  color: rgb(54, 53, 53);
+  line-height: 1.3rem;
+}
+#codes {
+  width: 100%;
+  padding: 1rem;
+  background-color: #F7F7F7;
+  border-radius: 0.5rem  ;
+}
+@media only screen and (max-width: 800px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  nav {
+    height: 15rem;
+    position: static;
+  }
+}
